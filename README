@@ -1,0 +1,19 @@
+The Project inputs various medical parameters related to Polycystic Ovary Syndrome and uses a Logistic Regression Model to display the probability of the person having PCOS.
+
+Around 30% of the Data Set was used to test the model. 
+
+-------------------------------------------------------------------------------------------
+The resultant accuracy was found to be 88%
+The Confusion Matrix is as follows
+
+Confusion matrix: 
+
+               Predicted No     Predicted Yes
+Actual No           105                8
+Actual Yes          11                38
+
+(No represents the situation where the person is predicted/found to NOT have PCOS)
+(Yes represents the situation where the person is predicted/found to have PCOS)
+-------------------------------------------------------------------------------------------
+The Source Code of the project is the python file "PCOSproject.py". 
+The Data Set used to train the ML model is in available in the file "PCOS_data.csv".
