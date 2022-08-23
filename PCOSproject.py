@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 
-credit_data = pd.read_csv(r"C:\Users\ASUS\OneDrive\Desktop\MLDATA\PCOS_data.csv")
+credit_data = pd.read_csv(r"PCOS_data.csv")
 '''
 print(credit_data.describe())
 print(credit_data.corr())
@@ -44,3 +44,11 @@ print("Actual No          ",cm[0,0],"              ",cm[0,1])
 print("Actual Yes         ",cm[1,0],"              ",cm[1,1])
 #total_correct/total
 print("\nAccuracy Score: ",accuracy_score(target_test,predictions))
+
+#diagnosing PCOS for a particular patient
+
+print("\n\nMedical Data of Patient: ")
+print(feature_test[:1])
+
+print("\nProbability of having PCOS and Probability of NOT having PCOS: ")
+print(model.predict_proba(feature_test[:1]))
